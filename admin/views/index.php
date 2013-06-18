@@ -6,21 +6,15 @@
 				<span>List Name</span>
 			</th>
 		</tr>
+    <?php foreach($this->results as $r){ ?>
 		<tr>
 			<td>
-				<span>Test Post</span>
+				<span><?php echo $r['name']; ?></span>
 			</td>
       <td>
         <span><a href="#">Edit</a> | <a href="#">Delete</a></span>
       </td>
 		</tr>
-		<tr>
-			<td>
-				<span>Lorem Ipsum Dolor Sit</span>
-			</td>
-      <td>
-        <span><a href="#">Edit</a> | <a href="#">Delete</a></span>
-      </td>
-		</tr>
-	</table>
+    <?php } ?>
+  </table>
 </div>
