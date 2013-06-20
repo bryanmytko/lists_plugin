@@ -8,9 +8,9 @@
     </tr>
     <tr>
 			<td>
-        <form action="index.php?page=longbeach_lists/admin/index.php&action=create" method="post">
+        <form action="<?php echo APP_PATH; ?>&action=create" method="post">
           <input type="text" name="new_list" />
-          <input class="button action" type="submit" class="newtag form-input-tip" value="Create List" />
+          <input class="button action" type="submit" value="Create List" />
         </form>
 			</td>
 		</tr>

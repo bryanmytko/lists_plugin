@@ -1,0 +1,7 @@
+.lblist_container {}
+.lblist_container h2 { font-size: 3em; padding: 20px 0 }
+.lblist_unit { width: 180px; float: left; padding: 0px 12px 12px 0; margin: 0px 12px 12px 0 }
+.lblist_unit p { padding: 4px 0 }
+
+#Grid .mix{ opacity: 0; display: none }
+.controls li { cursor: pointer; display: inline }

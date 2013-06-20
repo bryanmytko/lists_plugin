@@ -1,5 +1,5 @@
 <div class="wrap">
-  <h2>Long Beach Lists <a href="index.php?page=longbeach_lists/admin/index.php&action=new" class="add-new-h2">Add New</a></h2>
+  <h2>Long Beach Lists <a href="<?php echo APP_PATH; ?>&action=new" class="add-new-h2">Add New</a></h2>
 	<table style="width:300px;margin-top:10px" class="wp-list-table widefat fixed pages" cellspacing="0">
 		<tr>
 			<th colspan="2">
@@ -12,7 +12,10 @@
 				<span><?php echo $r['name']; ?></span>
 			</td>
       <td>
-        <span><a href="#">Edit</a> | <a href="#">Delete</a></span>
+        <span>
+          <a href="<?php echo APP_PATH; ?>&action=edit&id=<?php echo $r['id']; ?>">Edit</a> | 
+          <a href="<?php echo APP_PATH; ?>&action=delete&id=<?php echo $r['id']; ?>">Delete</a>
+        </span>
       </td>
 		</tr>
     <?php } ?>
