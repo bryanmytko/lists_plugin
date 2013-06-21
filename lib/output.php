@@ -15,43 +15,13 @@ class Longbeach_Output{
 
     $lists = $this->get_lists($type);
 
-    /*echo "<script>jQuery('#Grid').mixitup({
-    targetSelector: '.mix',
-    filterSelector: '.filter',
-    sortSelector: '.sort',
-    buttonEvent: 'click',
-    effects: ['fade','scale'],
-    listEffects: null,
-    easing: 'smooth',
-    layoutMode: 'grid',
-    targetDisplayGrid: 'inline-block',
-    targetDisplayList: 'block',
-    gridClass: '',
-    listClass: '',
-    transitionSpeed: 600,
-    showOnLoad: 'all',
-    sortOnLoad: false,
-    multiFilter: false,
-    filterLogic: 'or',
-    resizeContainer: true,
-    minHeight: 0,
-    failClass: 'fail',
-    perspectiveDistance: '3000',
-    perspectiveOrigin: '50% 50%',
-    animateGridList: true,
-    onMixLoad: null,
-    onMixStart: null,
-    onMixEnd: null
-    });</script>";*/
     echo "<script>jQuery(document).ready(function(){ jQuery('#Grid').mixitup(); });</script>";
-
-echo '<div class="controls"><ul>
-    <li class="filter active" data-filter="all">Show All<li> | 
-    <li class="filter" data-filter="pizza">Pizza</li> | 
-    <li class="filter" data-filter="italian">Italian</li> | 
-    <li class="filter" data-filter="chinese">Chinese</li> | 
-    <li class="filter" data-filter="thai">Thai</li>
-</ul></div>';
+		echo '<div class="controls"><ul>
+				<li class="filter active" data-filter="all">Show All<li> | 
+				<li class="filter" data-filter="pizza">Pizza</li> | 
+				<li class="filter" data-filter="italian">Italian</li> | 
+				<li class="filter" data-filter="chinese">Chinese</li> | 
+				<li class="filter" data-filter="thai">Thai</li></ul></div>';
     
   foreach($lists as $l){
       $items = $this->get_list_items($l['id']);
@@ -108,9 +78,5 @@ echo '<div class="controls"><ul>
     return $results;
 
   }
-
-  //@TODO sorting...? Ajax?
-  private function sorting(){} 
-
 
 }

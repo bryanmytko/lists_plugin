@@ -105,5 +105,3 @@ function lb_add_my_files() {
   wp_register_style('lb-style',plugins_url('/public/css/longbeach_lists.css',__FILE__));
   wp_enqueue_style('lb-style');
 }
-
-
