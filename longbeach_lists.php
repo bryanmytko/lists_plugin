@@ -100,8 +100,10 @@ register_deactivation_hook(__FILE__, array('WP_Longbeach_Lists', 'deactivate'));
 add_action('wp_enqueue_scripts','lb_add_my_files');
 function lb_add_my_files() {
   wp_enqueue_script("jquery");
-  wp_register_script( 'lb-mixitup', plugins_url('/public/js/mixitup-1.5.4/src/jquery.mixitup.js',__FILE__));
+  wp_register_script('lb-mixitup', plugins_url('/public/js/mixitup-1.5.4/src/jquery.mixitup.js',__FILE__));
   wp_enqueue_script('lb-mixitup');
+  wp_register_script('lb-script', plugins_url('/public/js/longbeach_lists.js',__FILE__));
+  wp_enqueue_script('lb-script');
   wp_register_style('lb-style',plugins_url('/public/css/longbeach_lists.css',__FILE__));
   wp_enqueue_style('lb-style');
 }
